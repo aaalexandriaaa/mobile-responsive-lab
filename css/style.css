@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box
+   }
+   
+   /* The Universal Selector */
+   *, /* All elements*/
+   *::before, /* All ::before pseudo-elements */
+   *::after { /* All ::after pseudo-elements */
+    /* height & width will now include border & padding by default
+       but can be over-ridden as needed */
+    box-sizing: inherit;
+   }
+   
+   /* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+   :root {
+    font-size: 62.5%
+   }
+   
+   body {
+    background-color: #9e9e9e;
+   /* Use a system font, if none are available use an available sans-sarif   font */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    margin: 0;
+}
+
+   section {
+    display:grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    width: 768px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+   }
+
+   div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    margin-left: 0;
+    border-radius: 0;
+    width:auto;
+   }    
+   
+   nav {
+    display:flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-left: auto;
+    width:auto;
+    
+   }
+
+   #one { 
+    display: flex; 
+    width:auto;
+    height: 200px;
+    
+   }
+
+   #two {
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    width:auto;
+    color: #212121;
+   }
+
+   
+   #three {
+       display:grid;
+       width: 100vw;
+       grid-template-columns: 1fr 1fr;
+   }
+
+   #phone {
+       background-color: #354a54;
+       text-align: center;
+       width: auto;
+   }
+
+   #message {
+       background-color: #657a85;
+       text-align: center;
+   }
+
+   #online {
+        width:auto;  
+        opacity: 0.5;      
+   }
+
+   #profile-pic {
+        border-radius: 50%;
+        width:auto;
+    }   
+   
+   #name {
+        font-size: 36px;
+        width:auto;
+    }
+
+    #star-rating {
+        width:auto;
+        background-color: #bdbdbd;
+    }
+
+    #occupation {
+        width:auto;
+    }
+
+    #specialties {
+        width:auto;
+        background-color: #bdbdbd;
+    }
+
+    #rate {
+        width:auto;
+    }
+
+    
+    @media only screen and (min-width: 600px) {
+        /* body {
+          display: grid;
+          grid-template-columns: 1fr, 1fr, 1fr;
+          grid-template-rows: auto auto auto;
+        } */
+        section {
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-rows: auto auto auto;
+        }
+        /* div {
+            display: grid;
+            grid-template-columns: 1fr, 1fr, 1fr;
+            grid-template-rows: auto auto auto;
+        }
+      } */
